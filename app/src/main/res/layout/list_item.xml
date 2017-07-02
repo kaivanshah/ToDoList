@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <EditText
+        android:id="@+id/tv_DTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/Title"/>
+
+    <EditText
+        android:id="@+id/tv_DDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_DTitle"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/Desc"/>
+
+    <DatePicker
+        android:id="@+id/dp_DueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_DDesc"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"></DatePicker>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal" android:layout_below="@id/dp_DueDate">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/btn_Save" android:text="@string/Save" android:layout_weight="1" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/btn_Cancel" android:text="@string/Cancel" android:layout_weight="1" />
+    </LinearLayout>
+
+</RelativeLayout>
